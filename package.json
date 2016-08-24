@@ -1,0 +1,33 @@
+{
+  "name": "burrito-place",
+  "version": "1.0.0",
+  "description": "Website for the best mexican restaurant ever",
+  "main": "keystone.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryannhg/burrito-place.git"
+  },
+  "keywords": [
+    "burrito",
+    "place",
+    "mexican",
+    "keystone"
+  ],
+  "author": "Ryan Haskell-Glatz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryannhg/burrito-place/issues"
+  },
+  "homepage": "https://github.com/ryannhg/burrito-place#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "keystone": "^0.3.22"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.1.0"
+  }
+}
