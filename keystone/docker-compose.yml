@@ -1,0 +1,19 @@
+version: '2'
+services:
+  mongo:
+    image: mongo
+  keystone:
+    build: 
+      context: .
+      dockerfile: node.Dockerfile
+    image: burritoplace-keystone
+    links: 
+      - mongo
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./.env:/usr/src/app/.env
+      - ./keystone.js:/usr/src/app/keystone.js
+      - ./models:/usr/src/app/models
+      - ./routes:/usr/src/app/routes
+      - ./updates:/usr/src/app/updates

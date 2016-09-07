@@ -1,6 +1,6 @@
 var keystone = require('keystone'),
     importRoutes = keystone.importer(__dirname);
- 
+
 // Handle 404 errors
 keystone.set('404', function(req, res, next) {
     res.notfound();
@@ -15,15 +15,15 @@ keystone.set('500', function(err, req, res, next) {
     }
     res.err(err, title, message);
 });
- 
+
 // Load Routes
 var routes = {
-    views: importRoutes('./views')
+    api: importRoutes('./api')
 };
  
 // Bind Routes
 exports = module.exports = function(app) {
     
-    app.get('/', routes.views.index);
+    app.get('/', routes.api.index);
     
-}
+};
