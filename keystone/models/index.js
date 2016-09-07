@@ -6,8 +6,11 @@ require('./menu/food-category.js');
 require('./menu/food-ingredient.js');
 require('./menu/food.js');
 
+// Links
+require('./link.js');
+
 // Pages
-//require('./page.js');
+require('./page.js');
 
 // People
 //require('./people.js');

@@ -19,6 +19,9 @@ Food.add({
         initial: true
         // TODO: Not required if category has a default price
     },
+    image: {
+        type: Types.Url
+    },
 
     category: { 
         type: Types.Relationship,
