@@ -20,9 +20,12 @@ angular.module('burritoPlaceApp', [])
 
     .controller('HomePageCtrl', ['$scope', 'KeystoneService', function($scope, KeystoneService){
 
-        $scope.ctrl = {};
-        var ctrl = $scope.ctrl;
+        $scope.onInit = function(){
+         
+            KeystoneService.getHomePage().then(function(result){
+                $scope.ctrl = result.data;
+            });
 
-        KeystoneService.getHomePage();
+        };
 
     }])

@@ -2,16 +2,58 @@
 <html ng-app="burritoPlaceApp">
     <head>
       <title>Burrito Place</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
       <!-- Bootstrap CSS -->
-      <link rel="stylesheet" headref="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+      <!-- FontAwesome -->
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Open+Sans" rel="stylesheet">
+
+      <link rel="stylesheet" type="text/css" href="style.css">
 
     </head>
-    <body ng-controller="HomePageCtrl">
+    <body ng-controller="HomePageCtrl" ng-init="onInit()">
 
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+      <!-- Fixed Navbar -->
+      <nav class="my-nav">
+        <div class="container">
 
-        <script type="text/javascript" src="default.js"></script>
+          <ul class="nav-links left">
+            <li>
+              <a ng-href="#" class="hidden-xs">
+<!--                 <i class="fa fa-home"></i>
+ -->          <span class="serif h3">Burrito Place</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="nav-links right">
+            <li ng-repeat="link in ctrl.topLinks">
+              <a ng-href="'#' + {{link.url}}">
+                <i class="fa {{link.icon}}"></i>
+                <span class="">{{link.name}}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Intro Jumbotron -->
+      <div class="jumbotron intro-jumbotron has-text-centered">
+        <h1 class="header serif">{{ctrl.header}}</h1>
+        <p class="sub-header">{{ctrl.subHeader}}</p>
+      </div>
+
+
+
+
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+      <script type="text/javascript" src="default.js"></script>
 
     </body>
 </html>
