@@ -21,6 +21,10 @@ body {
     font-family: 'Baloo Chettan', cursive;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 nav.my-nav {
     background-color: #BF4F45;
     color: white;

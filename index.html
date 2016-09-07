@@ -33,7 +33,7 @@
 
           <ul class="nav-links right">
             <li ng-repeat="link in ctrl.topLinks">
-              <a ng-href="'#' + {{link.url}}">
+              <a ng-href="#{{link.url}}">
                 <i class="fa {{link.icon}}"></i>
                 <span class="">{{link.name}}</span>
               </a>
@@ -44,7 +44,7 @@
 
       <!-- Intro Jumbotron -->
       <div class="jumbotron intro-jumbotron has-text-centered">
-        <h1 class="header serif">{{ctrl.header}}</h1>
+        <h1 class="header serif uppercase">{{ctrl.header}}</h1>
         <p class="sub-header">{{ctrl.subHeader}}</p>
       </div>
 
