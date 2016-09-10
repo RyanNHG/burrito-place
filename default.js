@@ -10,7 +10,7 @@ angular.module('burritoPlaceApp', [])
 
             return $http.get('http://localhost:3000/api/home-page')
                 .then(function(result){
-                    console.log(result);
+                    console.log(result.data);
                     return result;
                 });
 
@@ -18,7 +18,7 @@ angular.module('burritoPlaceApp', [])
 
     }])
 
-    .controller('HomePageCtrl', ['$scope', 'KeystoneService', function($scope, KeystoneService){
+    .controller('HomePageCtrl', ['$scope', '$sce', 'KeystoneService', function($scope, $sce, KeystoneService){
 
         $scope.onInit = function(){
          
@@ -27,5 +27,7 @@ angular.module('burritoPlaceApp', [])
             });
 
         };
+
+        $scope.trustAsHtml = $sce.trustAsHtml;
 
     }])
