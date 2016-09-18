@@ -1,2 +1,6 @@
 node_modules
-public
+
+# Include certain folders in submodules
+!backend/models
+!backend/routes
+!frontend/app

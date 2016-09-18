@@ -1,0 +1,28 @@
+version: '2'
+services:
+  mongo:
+    image: mongo
+  keystone:
+    build:
+      context: ./backend
+      dockerfile: node.Dockerfile
+    image: ryannhg/keystone
+    links:
+      - mongo
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend/keystone.js:/usr/src/app/keystone.js
+      - ./backend/models:/usr/src/app/models
+      - ./backend/routes:/usr/src/app/routes
+      - ./backend/updates:/usr/src/app/updates
+  angular:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: ryannhg/angular
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./frontend/index.js:/usr/src/app/index.js
+      - ./frontend/app:/usr/src/app/app
