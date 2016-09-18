@@ -1,0 +1,79 @@
+welcome-page-cmpt {
+
+
+  /* INTRO JUMBOTRON */
+  .intro-jumbotron {
+      background-color: #BF4F45;
+      color: white;
+      text-align: center;
+      padding: 150px 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+  }
+
+  /* FOODS JUMBOTRON */
+  .foods-jumbotron {
+      background-color: #C7AC76;
+  }
+
+  .foods-jumbotron > .header {
+      margin-top: 0;
+      margin-bottom: 2rem;
+      color: #A18B5F;
+  }
+
+  .foods-list {
+      display: flex;
+      justify-content: space-around;
+      margin: 0 2rem;
+  }
+
+  /* CARD */
+  .card {
+      flex: 1;
+      margin: 1rem;
+      background-color: #fff;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      overflow: auto;
+      z-index: 1;
+  }
+
+  .card > img {
+      width: 100%;
+      z-index: 0;
+  }
+
+  .card > .content {
+      padding: 1rem;
+      flex: 1;
+  }
+
+  .card > .content p {
+      font-size: inherit;
+  }
+
+  @media screen and (max-width: 768px){
+      .foods-list {
+          flex-direction: column;
+      }
+
+      .card {
+          flex-direction: row;
+          height: 200px;
+      }
+
+      .card > img {
+          width: initial;
+          height: 200px;
+      }
+
+      .card .content {
+          overflow: auto;
+      }
+  }
+
+}

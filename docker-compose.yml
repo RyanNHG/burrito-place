@@ -13,16 +13,18 @@ services:
       - "3000:3000"
     volumes:
       - ./backend/keystone.js:/usr/src/app/keystone.js
-      - ./backend/models:/usr/src/app/models
-      - ./backend/routes:/usr/src/app/routes
+      - ./models:/usr/src/app/models
+      - ./routes:/usr/src/app/routes
       - ./backend/updates:/usr/src/app/updates
   angular:
     build:
       context: ./frontend
       dockerfile: Dockerfile
     image: ryannhg/angular
+    links:
+      - keystone
     ports:
       - "8000:8000"
     volumes:
       - ./frontend/index.js:/usr/src/app/index.js
-      - ./frontend/app:/usr/src/app/app
+      - ./app:/usr/src/app/app

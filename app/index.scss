@@ -1,0 +1,41 @@
+@import 'https://fonts.googleapis.com/css?family=Baloo+Chettan|Open+Sans';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css';
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css';
+
+// Shared components
+@import 'app/shared/navbar-cmpt/style';
+
+// Welcome Page
+@import 'app/pages/welcome-page-cmpt/style';
+
+/*
+    #BF4F45; red
+    #650F08; darkred
+    #F2D194; tan
+    #C7AC76; darktan
+    #055946; green
+ */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    overflow:  auto;
+    margin: 0;
+}
+
+.serif {
+    font-family: 'Baloo Chettan', cursive;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.has-text-centered {
+    text-align: center;
+}

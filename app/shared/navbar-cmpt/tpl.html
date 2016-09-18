@@ -1,0 +1,22 @@
+<!-- Fixed Navbar -->
+<nav class="my-nav" ng-init="$ctrl.onInit()">
+  <div class="container">
+
+    <ul class="nav-links left">
+      <li>
+        <a ng-href="#" class="hidden-xs">
+          <span class="serif h3">Burrito Place</span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="nav-links right">
+      <li ng-repeat="link in $ctrl.links">
+        <a ng-href="#{{link.url}}">
+          <i class="fa {{link.icon}}"></i>
+          <span class="serif">{{link.name}}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
